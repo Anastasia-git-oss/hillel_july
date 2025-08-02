@@ -1,3 +1,24 @@
+///4.4
+let numOrStr = prompt('input number or string');
+console.log(numOrStr)
+
+switch (true) {
+    case numOrStr === null:
+        console.log('ви скасували')
+        break;
+    case numOrStr.trim() === '':
+        console.log('Empty String');
+        break;
+    case isNaN(+numOrStr):
+        console.log(' number is Ba_NaN')
+        break;
+    default:
+        console.log('OK!')
+        break;
+}
+
+//From the teacher
+
 //1.
 let firstDigit = parseInt(prompt(`Enter your digit:`));
 let secondDigit = parseInt(prompt(`Enter your second digit:`));
@@ -126,4 +147,8 @@ let d4 = Math.floor(userValue % 1000 / 100);
 let d5 = Math.floor(userValue % 100 / 10);
 let d6 = userValue % 10;
 
-
+if (d1 === d6 && d2 === d5 && d3 === d4) {
+    console.log("Number is mirror");
+} else {
+    console.log("Number isn't mirror");
+}
