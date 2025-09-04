@@ -1,0 +1,15 @@
+ 
+
+button {
+    background-color: cadetblue;
+    min-width: 100px;
+    min-height: 50px;
+    margin: 20px;
+    border: none;
+
+}
+
+button:hover{
+   color: cyan;
+   background-color: rgb(79, 88, 88);
+}
