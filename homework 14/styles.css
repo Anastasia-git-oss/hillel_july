@@ -1,0 +1,47 @@
+
+.container{
+    display: flex;
+    
+    align-items: center;
+
+    
+}
+.button-right-box{
+    transform: translateX(800px);
+}
+.button-left:hover, .button-right:hover {
+    border: 2px solid red;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+}
+
+.hidden{
+    display: none;
+}
+
+.images{
+    width: 700px;
+    height: 400px;
+}
+
+.button-breadcrumbs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5px;
+    margin-top: 20px;
+}
+.btn{
+    background-color: white;
+    max-width: 20px;
+    height: 15px;
+    border: 2px solid red;
+    border-radius: 40px;
+}
+.current{
+    background-color: red;
+}
