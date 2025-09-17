@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="order-box"></div>
+    <button class="my-orders" type="button">Мої замовлення</button>
+    <div class="wrapper">
+        <div class="categories"></div>
+        <div class="products"></div>
+        <div class="info"></div>
+    </div>
+
+    <div class="order-details"></div>
+
+    <form class="hidden" name="singin">
+        <div class="order">
+            <div class="box">
+                <label>П.І.Б: <br>
+                <input type="text" name="userName" placeholder="ПІБ">
+                <span class="userName-error"></span>
+                </label>
+            </div>
+            <div class="box">
+                <label>Місто: <br>
+                    <select name="city" id="">
+                        <option value="KV">Kyiv</option>
+                        <option value="LV">Lviv</option>
+                        <option value="OD">Odesa</option>
+                    </select>
+                </label>
+            </div>
+            <div class="box">
+                <label>Нова Пошта: <br>
+                    <select name="postOffice">
+                    <option value="1">Відділення №1</option>
+                    <option value="2">Відділення №2</option>
+                    <option value="3">Відділення №3</option>
+                    </select>
+                </label>
+            </div>
+            <div class="box">
+                <p>Оплата:</p>
+                <div class="radio-pay">
+                <label>Накладений платіж<input class="radio-pay-input" type="radio" name="pay" value="opm"></label>
+                <label>Оплата на рахунок<input class="radio-pay-input" type="radio" name="pay" value="card"></label>
+                </div>
+            </div>
+            <div class="box">
+                <p>Кількість товарів:</p>
+                <div>
+                <p><input class="input-number" type="number" name="amount" min="1" max="10" placeholder="1">
+                    <span class="input-number-error"></span>
+                </p>
+                </div>
+            </div>
+            <div class="box">
+                <p>Коментар до замовлення:</p>
+                <textarea name="comment" id=""></textarea>
+                <span class="comment-error"></span>
+            </div>
+            <button type="button" class="button-save">Придбати</button>
+        </div>
+
+        <div class="result hidden"></div>
+   
+
+
+    
+
+    
+
+    </form>
+
+    <script src="js/data.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

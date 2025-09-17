@@ -1,0 +1,91 @@
+
+body{
+  background-color: blanchedalmond;
+}
+
+
+.wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.wrapper > div {
+  min-width: 350px;
+  min-height: 100px;
+  padding: 20px;
+  border: 1px solid rgb(79, 60, 60);
+  border-radius: 30px;
+}
+.products-list, .categories-list{
+ text-align: center;
+
+}
+ul {
+  list-style: none;
+  margin: 0 auto;
+}
+
+li {
+  display: block;
+  width: fit-content;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+li:hover {
+  transition: 0.3s;
+  background: rgb(79, 60, 60);
+  cursor: pointer;
+  border: 1px solid blanchedalmond;
+  border-radius: 10px;
+  color: blanchedalmond;
+}
+
+button{
+  background-color: rgb(79, 60, 60);
+  color: blanchedalmond;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border: 1px solid rgb(79, 60, 60);
+  border-radius: 8px;
+  text-align: center;
+
+}
+
+input, textarea , select{
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  border: 1px solid rgb(79, 60, 60);
+  outline: none;
+  margin: 10px 0;
+  
+}
+input:focus {
+  border: 3px solid rgb(79, 60, 60);
+  transition: 0.1s;
+  outline: none;
+}
+.radio-pay-input{
+  margin-left: 5px;
+}
+.box{
+  padding-bottom: 15px;
+}
+.radio-pay{
+  display: flex;
+  gap: 20px;
+}
+select:focus{
+  background-color: rgb(79, 60, 60);
+  color: blanchedalmond;
+
+}
+
+.hidden{
+  display: none;
+}
+
+
+
