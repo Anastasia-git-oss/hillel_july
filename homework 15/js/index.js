@@ -315,7 +315,7 @@ function makeOrder(order) {
   wrapperOrders.appendChild(buttonDelete);
 
   orderBox.appendChild(wrapperOrders);
-}
+};
 
 
 
