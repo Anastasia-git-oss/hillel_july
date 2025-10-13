@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <button id="modalBtn" type="button" class="btn btn-secondary btn-lg" data-bs-toggle="tooltip" title="This button open modal window!">Click me!</button>
+    <button id="alertBtn" type="button" class="btn btn-warning">Click me!</button>
+    
+    <div class="modal fade" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="fs-5">Hello</h2>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnClose" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div id="alert" class="alert alert-dark mt-3 d-none" role="alert">It's alert</div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
