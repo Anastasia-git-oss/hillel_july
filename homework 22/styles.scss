@@ -1,0 +1,94 @@
+
+$bg: #121212;
+$text: #e0e0e0;
+$muted: #606060;
+$accent: rgba(89, 68, 170, 0.66); 
+$li-bg: #7f7f7f;
+$li-text: #000;
+$font-impact: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+// Mixins
+@mixin transition($props: all, $time: .3s, $timing: ease) {
+  transition: $props $time $timing;
+}
+
+%btn-base {
+  border: none;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 50px;
+  color: $muted;
+  background: transparent;
+}
+
+// Base
+body {
+  background-color: $bg;
+  color: $text;
+  font-family: $font-impact;
+}
+
+.container-fluid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 20px;
+
+  // responsive
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+ul {
+  > li {
+    margin-bottom: 10px;
+  }
+}
+
+.btn {
+  @extend %btn-base;
+
+  &.clicked {
+    color: $text;
+  }
+}
+
+.li {
+  background-color: $li-bg;
+  color: $li-text;
+  border: none;
+
+  &:hover {
+    border: 2px solid $accent;
+    text-shadow: 2px 2px 0 $accent;
+  }
+}
+
+.loadMore {
+  text-transform: uppercase;
+  font-size: large;
+  width: 100%;
+  border: 4px solid $text;
+  border-radius: 20px;
+  min-height: 40px;
+  background-color: $muted;
+  color: $text;
+  @include transition();
+
+  &:hover {
+    background-color: $text;
+    border: 2px solid $muted;
+    color: $muted;
+  }
+}
+
+.hidden {
+  display: none;
+}
