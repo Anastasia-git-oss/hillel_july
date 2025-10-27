@@ -1,0 +1,263 @@
+
+/* Container for three boxes */
+.boxes {
+  display: flex;
+  gap: 16px;
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.task-box {
+  flex: 1 1 0;
+  min-height: 140px;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.task-box ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex: 1 1 auto;
+}
+/* Center the Add button in the form */
+/* Responsive styles for the button */
+
+
+.task-box h3 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+}
+
+/* Status-specific styles */
+.status-todo {
+  --accent: #ff6b6b; /* red */
+}
+
+.status-inprogress {
+  --accent: #ffb84d; /* orange */
+}
+
+.status-done {
+  --accent: #51cf66; /* green */
+}
+
+/* Accent header bar */
+.task-box::before {
+  content: "";
+  height: 6px;
+  display: block;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin: -12px -12px 8px -12px;
+  background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 70%, white));
+}
+
+/* Card title row */
+.task-box .title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.status-todo .title::after {
+  content: "To do";
+  color: var(--accent);
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.status-inprogress .title::after {
+  content: "In progress";
+  color: var(--accent);
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.status-done .title::after {
+  content: "Done";
+  color: var(--accent);
+  font-weight: 600;
+  margin-left: auto;
+}
+
+/* Example list item styles */
+.task-box li {
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border: 1px dashed rgba(0,0,0,0.05);
+}
+
+/* Make it responsive */
+@media (max-width: 640px) {
+  .boxes { flex-direction: column; }
+}
+
+/* Global page styles */
+:root {
+  --bg: #f6f8fa;
+  --card-bg: #ffffff;
+  --muted: #6b7280;
+  --radius: 8px;
+  --max-width: 1100px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+html,body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: #111827;
+}
+
+.page {
+  max-width: var(--max-width);
+  margin: 24px auto;
+  padding: 0 16px 48px 16px;
+  box-sizing: border-box;
+}
+
+.site-header h1 {
+  margin: 0 0 4px 0;
+  font-size: 22px;
+}
+.site-header .subtitle {
+  margin: 0 0 12px 0;
+  color: var(--muted);
+}
+
+/* Controls / form */
+.controls {
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.8));
+  padding: 12px;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 4px rgba(16,24,40,0.05);
+  margin-bottom: 16px;
+}
+
+.task-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+  /* On larger screens keep inputs inline but force the button to its own centered row */
+  @media (min-width: 641px) {
+    .task-form { align-items: center; }
+    /* Make button appear centered on its own row */
+    .add-btn { margin-left: auto; margin-right: auto; }
+  }
+
+.task-input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: var(--card-bg);
+  font-size: 14px;
+  outline: none;
+}
+
+.title-input { flex: 0 1 260px; }
+.desc-input { flex: 1 1 420px; }
+
+.task-input:focus {
+  box-shadow: 0 0 0 4px rgba(79,70,229,0.06);
+  border-color: rgba(79,70,229,0.6);
+}
+.desc-btn, .update-btn, .delete-btn, .save-btn {
+  background: none;
+  border: 2px solid  var(--accent);
+  color: var(--accent); 
+  cursor: pointer;
+  font-weight: 600;
+  padding: 6px 8px;
+  border-radius: 6px;
+  min-width: 30px;
+  font-size: 13px;
+  margin-right: 5px;
+}
+.add-btn {
+  background: linear-gradient(180deg,#6366f1,#4f46e5);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  /* center button visually */
+  margin: 0 auto;
+  display: block;
+  min-width: 400px;
+}
+.add-btn:active { transform: translateY(1px); }
+
+/* Title styling inside boxes */
+.task-box .title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.task-box .title h3 { margin: 0; font-size: 16px; }
+
+/* Visually hidden utility (for accessibility) */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* Radio/status controls */
+.status-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 8px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.status-fieldset label {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+.status-fieldset input[type="radio"] {
+  width: 14px;
+  height: 14px;
+}
+
+/* Slightly stronger card backgrounds */
+.task-box { background: var(--card-bg); }
+
+/* Improve list item for content with title/description */
+.task-box li { display: flex; flex-direction: column; gap: 6px; }
+.task-box li .item-title { font-weight: 600; }
+.task-box li .item-desc { color: var(--muted); font-size: 13px; }
+
+@media (max-width: 640px) {
+  .task-form { flex-direction: column; align-items: stretch; }
+  .title-input, .desc-input { flex: 1 1 auto; }
+}
+
+/* On larger screens keep inputs inline but force the button to its own centered row */
+@media (min-width: 641px) {
+  .task-form { align-items: center; }
+  .add-btn { margin-left: auto; margin-right: auto; }
+}
+.hidden {
+    display: none ;
+}

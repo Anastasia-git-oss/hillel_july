@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <div class="page">
+        <header class="site-header">
+            <h1>Task Board</h1>
+        </header>
+
+        <div class="controls">
+            <form class="task-form">
+                <label class="visually-hidden">Назва задачі</label>
+                <input id="task-title" name="taskTitle" class="task-input title-input" type="text" placeholder="Назва задачі">
+
+                <label class="visually-hidden">Опис задачі</label>
+                <input id="task-desc" name="taskDesc" class="task-input desc-input" type="text" placeholder="Опис задачі">
+
+                <div class="status-fieldset">
+                    <p class="visually-hidden">Статус задачі</p>
+                    <label><input type="radio" name="status" value="todo" checked> To do</label>
+                    <label><input type="radio" name="status" value="inprogress"> In progress</label>
+                    <label><input type="radio" name="status" value="done"> Done</label>
+                </div>
+
+                <button id="add-task" name="addTaskBtn" class="add-btn" type="button">Додати</button>
+            </form>
+        </div>
+
+        
+        <div class="boxes">
+            <div class="task-box status-todo">
+                <div class="title"><h3>To do</h3></div>
+                <ul></ul>
+            </div>
+            <div class="task-box status-inprogress">
+                <div class="title"><h3>In progress</h3></div>
+                <ul></ul>
+            </div>
+            <div class="task-box status-done">
+                <div class="title"><h3>Done</h3></div>
+                <ul></ul>
+            </div>
+        </div>
+        
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
