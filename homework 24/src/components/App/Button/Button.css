@@ -1,0 +1,15 @@
+.btn{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #66ff00;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.btn.clicked {
+    background-color: #ec1dff;
+    color: #fff;
+}
